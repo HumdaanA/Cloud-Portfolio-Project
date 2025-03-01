@@ -4,7 +4,7 @@ provider "aws" {
   region = "us-east-1"
 }
 
-S3 Bucket for Static Website Hosting
+// S3 Bucket for Static Website Hosting
 resource "aws_s3_bucket" "resume" {
   bucket = "humdaana-cloud-portfolio-resume"
 }
@@ -108,7 +108,7 @@ resource "aws_dynamodb_table" "visitor_count" {
   }
 }
 
-# IAM Role for Lambda
+// IAM Role for Lambda
 resource "aws_iam_role" "lambda_role" {
   name = "lambda_execution_role"
 
