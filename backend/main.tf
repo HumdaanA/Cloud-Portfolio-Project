@@ -42,7 +42,7 @@ resource "aws_s3_bucket_ownership_controls" "resume" {
   }
 }
 
-# CloudFront Distribution
+// CloudFront Distribution
 resource "aws_cloudfront_distribution" "cdn" {
   origin {
     domain_name = aws_s3_bucket.resume.bucket_regional_domain_name
@@ -79,7 +79,7 @@ resource "aws_cloudfront_distribution" "cdn" {
 }
 }
 
-# Route 53 Domain Configuration
+// Route 53 Domain Configuration
 resource "aws_route53_zone" "resume_zone" {
   name = "humdaan-ahmad-portfolio.com"
 }
@@ -96,7 +96,7 @@ resource "aws_route53_record" "resume_record" {
   }
 }
 
-# DynamoDB Table
+// DynamoDB Table
 resource "aws_dynamodb_table" "visitor_count" {
   name           = "visitorCount"
   billing_mode   = "PAY_PER_REQUEST"
@@ -135,7 +135,7 @@ resource "aws_iam_policy_attachment" "lambda_dynamodb_access" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess"
 }
 
-# Lambda Function for Visitor Counter
+// Lambda Function for Visitor Counter
 resource "aws_lambda_function" "visitor_counter" {
   function_name    = "visitorCounter"
   role            = aws_iam_role.lambda_role.arn
@@ -152,7 +152,7 @@ resource "aws_lambda_function" "visitor_counter" {
   }
 }
 
-# API Gateway for Lambda
+// API Gateway for Lambda
 resource "aws_apigatewayv2_api" "api" {
   name          = "VisitorCounterAPI"
   protocol_type = "HTTP"
@@ -176,7 +176,7 @@ resource "aws_apigatewayv2_route" "visitor_count_route" {
   target    = "integrations/${aws_apigatewayv2_integration.lambda_integration.id}"
 }
 
-# Lambda Permission for API Gateway
+// Lambda Permission for API Gateway
 resource "aws_lambda_permission" "apigw_lambda" {
   action        = "lambda:InvokeFunction"
   function_name = aws_lambda_function.visitor_counter.function_name
@@ -184,7 +184,7 @@ resource "aws_lambda_permission" "apigw_lambda" {
   source_arn    = "${aws_apigatewayv2_api.api.execution_arn}/*/*"
 }
 
-# Output Values
+// Output Values
 output "website_url" {
   value = "https://${aws_cloudfront_distribution.cdn.domain_name}"
 }
