@@ -17,6 +17,8 @@ This project is my implementation of the **Cloud Resume Challenge**, where I bui
 
 ## 🏗️ Architecture
 
+[View Workflow Here](https://drive.google.com/file/d/1FryIbIruqJkdhFmA0aQYzJ8Q4bHJ1HkZ/view?usp=sharing)
+
 The project consists of the following AWS services and technologies:
 
 1. **Frontend (Static Website)**
