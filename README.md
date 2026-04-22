@@ -13,7 +13,7 @@ This project is my implementation of the **Cloud Resume Challenge**, where I bui
 
 ### 🌍 Live Webiste
 
-[View my Cloud Portfolio here](https://www.humdaan-ahmad-portfolio.com/)
+[View my Cloud Portfolio here](https://www.humdaan.dev/)
 
 ## 🏗️ Architecture
 
