@@ -2,7 +2,7 @@
 
 This project is my implementation of the **Cloud Resume Challenge**, where I built and deployed a fully serverless, cloud-based resume using AWS services and Infrastructure as Code (IaC). The project includes a static website, a visitor counter, and a CI/CD pipeline using GitHub Actions.
 
-## 🚀 Project Overview
+## Project Overview
 
 ### Tech Stack
 - **Frontend**: HTML, CSS, JavaScript (Static Website hosted on S3 + CloudFront)
@@ -11,11 +11,11 @@ This project is my implementation of the **Cloud Resume Challenge**, where I bui
 - **CI/CD**: GitHub Actions
 - **Domain & SSL**: AWS Route 53 + AWS Certificate Manager
 
-### 🌍 Live Webiste
+### Live Webiste
 
 [View my Cloud Portfolio here](https://www.humdaan.dev/)
 
-## 🏗️ Architecture
+## Architecture
 
 [View Workflow Here](https://drive.google.com/file/d/1FryIbIruqJkdhFmA0aQYzJ8Q4bHJ1HkZ/view?usp=sharing)
 
@@ -38,9 +38,9 @@ The project consists of the following AWS services and technologies:
 
 ## Features
 
-✅ Static Website Hosting with S3
-✅ SSL-secured with CloudFront & ACM
-✅ DynamoDB for visitor count storage
-✅ AWS Lambda & API Gateway for Backend
-✅ CI/CD Pipeline with GitHub Actions
-✅ Infrastructure as Code using Terraform
+- Static Website Hosting with S3
+- SSL-secured with CloudFront & ACM
+- DynamoDB for visitor count storage
+- AWS Lambda & API Gateway for Backend
+- CI/CD Pipeline with GitHub Actions
+- Infrastructure as Code using Terraform
